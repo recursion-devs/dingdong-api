@@ -14,8 +14,9 @@ provider:
         - s3:PutObjectAcl
         - s3:GetObject
         - s3:GetObjectAcl
-      Resource:
-        - "Fn::GetAtt" : [DingDongAppResBucket, Arn]
+      Resource: "arn:aws:s3:::dingdong-app/*"
+
+
 
 functions:
   meme-service:
